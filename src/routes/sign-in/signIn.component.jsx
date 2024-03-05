@@ -4,8 +4,7 @@ import {signInWithGooglePopup,createUserDocumentFromAuth} from '../../utils/fire
 const SignIn = () =>{
 	const logGoogleUser = async () => {
       const {user} = await signInWithGooglePopup();
-      createUserDocumentFromAuth(user)
-      console.log(user);
+      const userDocRef = createUserDocumentFromAuth(user)
 	}
 	return(
          <div>
