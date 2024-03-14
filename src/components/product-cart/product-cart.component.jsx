@@ -1,5 +1,5 @@
 import "./product-card.styles.scss"
-import button from '../button/button.component'
+import Button from '../button/button.component'
 
 const ProductCard = ({product}) =>{
   const {name,price,imageUrl} = product
@@ -10,7 +10,7 @@ const ProductCard = ({product}) =>{
         <span className="name">{name}</span>
         <span className="price">{price}</span>
         </div>
-        <button button_type="inverted">Add to Cart</button>
+        <Button button_type="inverted">Add to Cart</Button>
        </div>
   	)
 }
