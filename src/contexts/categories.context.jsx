@@ -18,7 +18,6 @@ useEffect(()=>{
 	getCategoriesMap();
 },[])
 
-
 	const value = {categoriesMap};
 	return (
 	<CategoriesContext.Provider value={value}>
