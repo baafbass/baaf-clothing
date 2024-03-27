@@ -1,8 +1,8 @@
-import './category.styles.scss';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect, useContext, Fragment } from 'react';
 import { CategoriesContext } from '../../contexts/categories.context';
 import ProductCard from '../../components/product-cart/product-cart.component';
+import {CategoryTitle,CategoryContainer} from './category.styles'
 
 const Category = () => {
   const { category } = useParams();
@@ -10,7 +10,6 @@ const Category = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    // Check if categoriesMap and category exist before setting products
     if (categoriesMap && category && categoriesMap[category]) {
       setProducts(categoriesMap[category]);
     }
@@ -18,14 +17,14 @@ const Category = () => {
 
   return (
     <Fragment>
-      <h2 className="category-title">{category && category.toUpperCase()}</h2>
-      <div className="category-container">
+      <CategoryTitle as='h2'>{category && category.toUpperCase()}</CategoryTitle>
+      <CategoryContainer>
       
         {products &&
           products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
-      </div>
+      </CategoryContainer>
     </Fragment>
   );
 };

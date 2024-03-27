@@ -1,5 +1,5 @@
 import {useState,useContext} from 'react';
-import 
+import  
 {
      signInWithGooglePopup,
      createUserDocumentFromAuth,
@@ -7,7 +7,7 @@ import
 }
 from '../../utils/firebase/firebase.utils'
 import FormInput from '../form-input/form-input.component'
-import './sign-in-form.styles.scss'
+import {SignInContainer} from './sign-in-form.styles'
 import Button from '../button/button.component'
 
 
@@ -63,7 +63,7 @@ const SignInForm = () => {
     }
 
 	return(
-          <div className="">
+          <SignInContainer>
           <h2>Already have an account?</h2>
           <span>Sign in with your email and password</span>
           <form onSubmit={handleSubmit}>
@@ -92,7 +92,7 @@ const SignInForm = () => {
                </div>
           	
           </form>
-          </div>
+          </SignInContainer>
 		)
 }
 
