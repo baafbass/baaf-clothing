@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-
-
 export const BackgroundImage = styled.div`
     width: 100%;
     height: 100%;
@@ -35,7 +33,6 @@ export const Body = styled.div`
       font-size: 16px;
     }
 `
-
 
 export const DirectoryItemContainer = styled.div`
   min-width: 30%;
