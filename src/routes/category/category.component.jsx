@@ -19,7 +19,6 @@ const Category = () => {
     <Fragment>
       <CategoryTitle as='h2'>{category && category.toUpperCase()}</CategoryTitle>
       <CategoryContainer>
-      
         {products &&
           products.map((product) => (
             <ProductCard key={product.id} product={product} />
